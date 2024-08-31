@@ -1,8 +1,7 @@
 1) Муратшин Ильяс
 * Запихнуть код из файла в https://phpize.online/
 * Запихнуть sql
-
-sql
+```
   CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -12,9 +11,9 @@ insert into users(name, age) values ('test1', 17);
 insert into users(name, age) values ('test2', 18);
 insert into users(name, age) values ('test3', 20);
 insert into users(name, age) values ('test4', 30);
-
+```
 * Вариант использования:
-php
+```
 <?php
 $config = [
     'type' => 'mysql',
@@ -38,3 +37,4 @@ $db->delete('users')->where('name', '=', 'test1')->execute();
 $result = $db->select('*')->from('users')->execute();
 print_r($result);
 ?>
+```
